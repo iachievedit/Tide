@@ -8,12 +8,12 @@ UNAME := $(shell uname)
 
 .PHONY: install package
 
-all: $(TARGET)
+all:	libtide.a
 
 SRCS=$(wildcard Tide/*.c)
 HDRS=$(wildcard Tide/*.h)
 
-$(TARGET):	$(SRCS)
+libtide.a:	$(SRCS)
 	clang -c $(SRCS)
 ifeq ($(UNAME), Linux) # build for linux
 	ar -rcs lib$(LIB_NAME).a *.o
@@ -23,7 +23,7 @@ ifeq ($(UNAME), Darwin) # build for darwin
 endif
 	rm *.o
 
-install:
+install:	libtide.a
 	mkdir -p $(TARGET)/usr/local/lib
 	mkdir -p $(TARGET)/usr/local/include/$(TARGET)
 	cp $(HDRS) $(TARGET)/usr/local/include/$(TARGET)
