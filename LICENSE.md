@@ -1,9 +1,7 @@
 The MIT License (MIT)
 
-Copyright (c) 2015 Martin Sustrik
-
-Copyright (c) 2015 Zewo
-
+Copyright (c) 2015 Martin Sustrik  
+Copyright (c) 2015 Zewo  
 Copyright (c) 2016 iAchieved.it
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
